@@ -13,7 +13,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4001");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         case 2:
@@ -22,7 +21,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4002");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         case 3:
@@ -31,7 +29,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4003");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         case 4:
@@ -40,7 +37,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4004");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         case 5:
@@ -49,7 +45,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4005");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         case 6:
@@ -58,7 +53,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4006");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         case 7:
@@ -67,7 +61,6 @@ void print_diode(int diode)
             strcpy(full_details.IC_no, "1N4007");
             strcpy(full_details.IC_pin_sequence, "KA");
             strcpy(full_details.IC_name, "PN junction diode");
-            strcpy(full_details.IC_package, "DO-41");
             strcpy(full_details.IC_category, "Diode");
             break;
         default:
@@ -94,7 +87,6 @@ void print_gate(int gate)
             strcpy(full_details.IC_no, "7400");
             strcpy(full_details.IC_name, "2-input 1-output NAND gate");
             strcpy(full_details.IC_pin_sequence, "IIO");
-            strcpy(full_details.IC_package, "DIP");
             strcpy(full_details.IC_category, "Logic gate");
             printf("%s\n", pin_config1);
             break;
@@ -103,7 +95,6 @@ void print_gate(int gate)
             strcpy(full_details.IC_no, "7402");
             strcpy(full_details.IC_name, "2-input 1-output NOR gate");
             strcpy(full_details.IC_pin_sequence, "OII");
-            strcpy(full_details.IC_package, "DIP");
             strcpy(full_details.IC_category, "Logic gate");
             printf("%s\n", pin_config2);
             break;
@@ -112,7 +103,6 @@ void print_gate(int gate)
             strcpy(full_details.IC_no, "7404");
             strcpy(full_details.IC_name, "1-input 1-output NOT gate");
             strcpy(full_details.IC_pin_sequence, "IOIO");
-            strcpy(full_details.IC_package, "DIP");
             strcpy(full_details.IC_category, "Logic gate");
             printf("%s\n", pin_config3);
             break;
@@ -121,7 +111,6 @@ void print_gate(int gate)
             strcpy(full_details.IC_no, "7408");
             strcpy(full_details.IC_name, "2-input 1-output AND gate");
             strcpy(full_details.IC_pin_sequence, "IIO");
-            strcpy(full_details.IC_package, "DIP");
             strcpy(full_details.IC_category, "Logic gate");
             printf("%s\n", pin_config1);
             break;
@@ -130,7 +119,6 @@ void print_gate(int gate)
             strcpy(full_details.IC_no, "7432");
             strcpy(full_details.IC_name, "2-input 1-output OR gate");
             strcpy(full_details.IC_pin_sequence, "IIO");
-            strcpy(full_details.IC_package, "DIP");
             strcpy(full_details.IC_category, "Logic gate");
             printf("%s\n", pin_config1);
             break;
@@ -139,7 +127,6 @@ void print_gate(int gate)
             strcpy(full_details.IC_no, "7486");
             strcpy(full_details.IC_name, "2-input 1-output XOR gate");
             strcpy(full_details.IC_pin_sequence, "IIO");
-            strcpy(full_details.IC_package, "DIP");
             strcpy(full_details.IC_category, "Logic gate");
             printf("%s\n", pin_config1);
             break;
@@ -163,7 +150,6 @@ void print_mosfet(int option)
             strcpy(full_details.IC_no, "BC170");
             strcpy(full_details.IC_name, "N-channel MOSFET");
             strcpy(full_details.IC_pin_sequence, "DGS");
-            strcpy(full_details.IC_package, "TO-92");
             strcpy(full_details.IC_category, "MOSFET");
             print_dip_pin();
             printf("1-Drain\t2-Gate\t3-Source\n");
@@ -172,7 +158,6 @@ void print_mosfet(int option)
             strcpy(full_details.IC_no, "BS170P");
             strcpy(full_details.IC_name, "N-channel MOSFET");
             strcpy(full_details.IC_pin_sequence, "SGD");
-            strcpy(full_details.IC_package, "TO-92");
             strcpy(full_details.IC_category, "MOSFET");
             print_dip_pin();
             printf("1-Source\t2-Gate\t3-Drain\n");
@@ -181,7 +166,6 @@ void print_mosfet(int option)
             strcpy(full_details.IC_no, "IRF540");
             strcpy(full_details.IC_name, "MOSFET");
             strcpy(full_details.IC_pin_sequence, "GDS");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "MOSFET");
             print_to_pin();
             printf("1-Gate\t2-Drain\t3-Source\n");
@@ -205,7 +189,6 @@ void print_phototransistor(int option)
             strcpy(full_details.IC_no, "2N5777");
             strcpy(full_details.IC_name, "Photo transistor");
             strcpy(full_details.IC_pin_sequence, "ECB");
-            strcpy(full_details.IC_package, "TO-92");
             strcpy(full_details.IC_category, "Photo transistor");
             print_dip_pin();
             printf("1-Emitter\t2-Collector\t3-Base\n");
@@ -214,7 +197,6 @@ void print_phototransistor(int option)
             strcpy(full_details.IC_no, "L14F1");
             strcpy(full_details.IC_name, "Photo transistor");
             strcpy(full_details.IC_pin_sequence, "CBE");
-            strcpy(full_details.IC_package, "Metal cap");
             strcpy(full_details.IC_category, "Photo transistor");
             print_hat_pin();
             printf("1-Collector\t2-Base\t3-Emitter\n");
@@ -241,7 +223,6 @@ void print_regulator(int regulator)
             strcpy(full_details.IC_no, "7805");
             strcpy(full_details.IC_name, "+5V fixed voltage regulator");
             strcpy(full_details.IC_pin_sequence, "Vs-G-Vo");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "Regulator IC");
             printf("%s\n", pin_config1);
             break;
@@ -250,7 +231,6 @@ void print_regulator(int regulator)
             strcpy(full_details.IC_no, "7806");
             strcpy(full_details.IC_name, "+6V fixed voltage regulator");
             strcpy(full_details.IC_pin_sequence, "Vs-G-Vo");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "Regulator IC");
             printf("%s\n", pin_config1);
             break;
@@ -259,7 +239,6 @@ void print_regulator(int regulator)
             strcpy(full_details.IC_no, "7808");
             strcpy(full_details.IC_name, "+8V fixed voltage regulator");
             strcpy(full_details.IC_pin_sequence, "Vs-G-Vo");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "Regulator IC");
             printf("%s\n", pin_config1);
             break;
@@ -268,7 +247,6 @@ void print_regulator(int regulator)
             strcpy(full_details.IC_no, "7809");
             strcpy(full_details.IC_name, "+9V fixed voltage regulator");
             strcpy(full_details.IC_pin_sequence, "Vs-G-Vo");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "Regulator IC");
             printf("%s\n", pin_config1);
             break;
@@ -277,7 +255,6 @@ void print_regulator(int regulator)
             strcpy(full_details.IC_no, "7812");
             strcpy(full_details.IC_name, "+12V fixed voltage regulator");
             strcpy(full_details.IC_pin_sequence, "Vs-G-Vo");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "Regulator IC");
             printf("%s\n", pin_config1);
             break;
@@ -286,7 +263,6 @@ void print_regulator(int regulator)
             strcpy(full_details.IC_no, "LM317");
             strcpy(full_details.IC_name, "Adjustable voltage regulator");
             strcpy(full_details.IC_pin_sequence, "G-Vo-Vs");
-            strcpy(full_details.IC_package, "TO-220");
             strcpy(full_details.IC_category, "Regulator IC");
             printf("%s\n", pin_config2);
             break;
@@ -390,140 +366,120 @@ void print_transistor(int transistor)
             printf("1-Collector\t2-Base\t3-Emitter\n");
             strcpy(full_details.IC_no, "BC546");
             strcpy(full_details.IC_pin_sequence, "CBE");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 2:
             print_dip_pin();
             printf("1-Collector\t2-Base\t3-Emitter\n");
             strcpy(full_details.IC_no, "BC547");
             strcpy(full_details.IC_pin_sequence, "CBE");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 3:
             print_dip_pin();
             printf("1-Collector\t2-Base\t3-Emitter\n");
             strcpy(full_details.IC_no, "BC548");
             strcpy(full_details.IC_pin_sequence, "CBE");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 4:
             print_dip_pin();
             printf("1-Collector\t2-Base\t3-Emitter\n");
             strcpy(full_details.IC_no, "BC549");
             strcpy(full_details.IC_pin_sequence, "CBE");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 5:
             print_hat_pin();
             printf("1-Collector\t2-Base\t3-Emitter\n");
             strcpy(full_details.IC_no, "AC187");
             strcpy(full_details.IC_pin_sequence, "CBE");
-            strcpy(full_details.IC_package, "Metal hat");
             break;
         case 6:
             print_to_pin();
             printf("1-Base\t2-Collector\t3-Emitter\n");
             strcpy(full_details.IC_no, "TIP120");
             strcpy(full_details.IC_pin_sequence, "BCE");
-            strcpy(full_details.IC_package, "TO-220");
             break;
         case 7:
             print_to_pin();
             printf("1-Base\t2-Collector\t3-Emitter\n");
             strcpy(full_details.IC_no, "TIP121");
             strcpy(full_details.IC_pin_sequence, "BCE");
-            strcpy(full_details.IC_package, "TO-220");
             break;
         case 8:
             print_to_pin();
             printf("1-Base\t2-Collector\t3-Emitter\n");
             strcpy(full_details.IC_no, "TIP122");
             strcpy(full_details.IC_pin_sequence, "BCE");
-            strcpy(full_details.IC_package, "TO-220");
             break;
         case 9:
             print_bd_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "BD139");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-126");
             break;
         case 10:
             print_bd_pin();
             printf("1-Base\t2-Collector\t3-Emitter\n");
             strcpy(full_details.IC_no, "BD677");
             strcpy(full_details.IC_pin_sequence, "BCE");
-            strcpy(full_details.IC_package, "TO-126");
             break;
         case 11:
             print_dip_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "BC557");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 12:
             print_dip_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "BC558");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 13:
             print_dip_pin();
             printf("1-Base\t2-Collector\t3-Emitter\n");
             strcpy(full_details.IC_no, "BC636");
             strcpy(full_details.IC_pin_sequence, "BCE");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 14:
             print_dip_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "2N2222A");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-92");
             break;
         case 15:
             print_hat_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "AC188");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "Metal hat");
             break;
         case 16:
             print_to_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "TIP125");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-220");
             break;
         case 17:
             print_to_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "TIP126");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-220");
             break;
         case 18:
             print_to_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "TIP127");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "TO-220");
             break;
         case 19:
             print_bd_pin();
             printf("1-Emitter\t2-Collector\t3-Base\n");
             strcpy(full_details.IC_no, "BD140");
             strcpy(full_details.IC_pin_sequence, "ECB");
-            strcpy(full_details.IC_package, "TO-126");
             break;
         case 20:
             print_hat_pin();
             printf("1-Emitter\t2-Base\t3-Collector\n");
             strcpy(full_details.IC_no, "BEL100P");
             strcpy(full_details.IC_pin_sequence, "EBC");
-            strcpy(full_details.IC_package, "Metal hat");
             break;
         default:
             printf("Please select the correct option\n");

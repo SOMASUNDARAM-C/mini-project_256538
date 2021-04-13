@@ -11,6 +11,12 @@ void test_print_regulator();
 void test_print_gate();
 void test_print_mosfet();
 void test_print_phototransistor();
+void test_print_bd_pin();
+void test_print_to_pin();
+void test_print_dip_pin();
+void test_print_diode_pin();
+void test_print_gate_pin();
+void test_print_hat_pin();
 
 /* Required by the unity test framework */
 void setUp(){}
@@ -30,6 +36,12 @@ int main()
     RUN_TEST(test_print_gate);
     RUN_TEST(test_print_mosfet);
     RUN_TEST(test_print_phototransistor);
+    RUN_TEST(test_print_bd_pin);
+    RUN_TEST(test_print_to_pin);
+    RUN_TEST(test_print_dip_pin);
+    RUN_TEST(test_print_diode_pin);
+    RUN_TEST(test_print_gate_pin);
+    RUN_TEST(test_print_hat_pin);
 
     /* Close the Unity Test Framework */
     return UNITY_END();
@@ -41,21 +53,18 @@ void test_print_diode(void) {
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_no, "1N4001"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_name, "PN junction diode"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Diode"));
-    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DO-41"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "KA"));
     
     print_diode(7);
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_no, "1N4007"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_name, "PN junction diode"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Diode"));
-    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DO-41"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "KA"));
 
     print_diode(4);
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_no, "1N4004"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_name, "PN junction diode"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Diode"));
-    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DO-41"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "KA"));
 
     print_diode(10);
@@ -86,21 +95,18 @@ void test_print_transistor(void) {
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_no, "BC546"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_name, "NPN transistor"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Transistor"));
-    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-92"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "CBE"));
 
     print_transistor(10);
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_no, "BD677"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_name, "NPN transistor"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Transistor"));
-    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-126"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "BCE"));
 
     print_transistor(13);
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_no, "BC636"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_name, "PNP transistor"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Transistor"));
-    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-92"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "BCE"));
 
     print_transistor(18);
@@ -293,4 +299,34 @@ void test_print_phototransistor(void){
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_category, "Other"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "XXXX"));
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_pin_sequence, "XXXX"));
+}
+
+void test_print_hat_pin()
+{
+    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "Metal cap"));
+}
+
+void test_print_bd_pin()
+{
+    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-126"));
+}
+
+void test_print_to_pin()
+{
+    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-220"));
+}
+
+void test_print_dip_pin()
+{
+    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-92"));
+}
+
+void test_print_diode_pin()
+{
+    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DO-41"));
+}
+
+void test_print_gate_pin()
+{
+    TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DIP"));
 }

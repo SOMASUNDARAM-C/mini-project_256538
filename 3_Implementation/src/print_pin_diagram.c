@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include "global_data.h"
 
 int print_bd_pin()
 {
+	strcpy(full_details.IC_package, "TO-126");
 	printf(" _________\n");
 	printf("|    _    |\n");
 	printf("|   (_)   |\n");
@@ -17,6 +19,7 @@ int print_bd_pin()
 
 int print_diode_pin()
 {
+	strcpy(full_details.IC_package, "DO-41");
 	printf("     ____________________\n");
 	printf("     |   ||             |\n");
 	printf("K____|   ||             |____A\n");
@@ -28,6 +31,7 @@ int print_diode_pin()
 
 int print_dip_pin()
 {
+	strcpy(full_details.IC_package, "TO-92");
 	printf(" _________\n");
 	printf("|   XX    |\n");
 	printf("|  XXXX   |\n");
@@ -43,6 +47,7 @@ int print_dip_pin()
 
 int print_gate_pin()
 {
+	strcpy(full_details.IC_package, "DIP");
 	printf("  14  13  12  11  10  9  8\n");
 	printf(" __________________________\n");
 	printf("|                          |\n");
@@ -56,6 +61,7 @@ int print_gate_pin()
 
 int print_hat_pin()
 {
+	strcpy(full_details.IC_package, "Metal cap");
 	printf("             *    *    *\n");
 	printf("        *                   *\n");
 	printf("     *                         *\n");
@@ -76,6 +82,7 @@ int print_hat_pin()
 
 int print_to_pin()
 {
+	strcpy(full_details.IC_package, "TO-220");
 	printf("___________\n");
 	printf("|    _    |\n");
 	printf("|   (_)   |\n");
