@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "global_data.h"
 
 int print_bd_pin()

@@ -30,19 +30,19 @@ int main()
     UNITY_BEGIN();
 
     /* Run Test functions */
-    RUN_TEST(test_print_diode);
-    RUN_TEST(test_print_transistor);
-    RUN_TEST(test_print_regulator);
-    RUN_TEST(test_print_gate);
-    RUN_TEST(test_print_mosfet);
-    RUN_TEST(test_print_phototransistor);
     RUN_TEST(test_print_bd_pin);
     RUN_TEST(test_print_to_pin);
     RUN_TEST(test_print_dip_pin);
     RUN_TEST(test_print_diode_pin);
     RUN_TEST(test_print_gate_pin);
     RUN_TEST(test_print_hat_pin);
-
+    RUN_TEST(test_print_diode);
+    RUN_TEST(test_print_transistor);
+    RUN_TEST(test_print_regulator);
+    RUN_TEST(test_print_gate);
+    RUN_TEST(test_print_mosfet);
+    RUN_TEST(test_print_phototransistor);
+   
     /* Close the Unity Test Framework */
     return UNITY_END();
 }
@@ -303,30 +303,36 @@ void test_print_phototransistor(void){
 
 void test_print_hat_pin()
 {
+    print_hat_pin();
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "Metal cap"));
 }
 
 void test_print_bd_pin()
 {
+    print_bd_pin();
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-126"));
 }
 
 void test_print_to_pin()
 {
+    print_to_pin();
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-220"));
 }
 
 void test_print_dip_pin()
 {
+    print_dip_pin();
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "TO-92"));
 }
 
 void test_print_diode_pin()
 {
+    print_diode_pin();
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DO-41"));
 }
 
 void test_print_gate_pin()
 {
+    print_gate_pin();
     TEST_ASSERT_EQUAL(0, strcmp(full_details.IC_package, "DIP"));
 }
