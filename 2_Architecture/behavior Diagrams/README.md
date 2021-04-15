@@ -1,4 +1,7 @@
 # Behavior Diagrams
 
-## Add all the Behavior diagrams implememted
+## Use case Diagram
+![use_case](Use_case.png)
+## Activity Diagram
+![activity](activity.png)
 
