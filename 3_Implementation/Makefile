@@ -1,5 +1,6 @@
 # Name of the project
 PROJECT_NAME = Pin_configuration_finder
+TEST_PROJECT_NAME = Test_$(PROJECT_NAME)
 
 # Output directory
 BUILD = build
@@ -14,48 +15,41 @@ test/test_print_component.c\
 unity/unity.c\
 src/print_pin_diagram.c\
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME)
-
 # All include folders with header files
 INC	= -Iinc\
 -Iunity\
+#To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out
+   endif
+endif
 
-#Library Inlcudes
-#INCLUDE_LIBS = 
-#INCLUDE_LIBS = -lcunit
+# Makefile will not run target command if the name with file already exists. To override, use .PHONY
+.PHONY : all test coverage run clean doc
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME)
+all:$(BUILD)
+	gcc $(SRC) $(INC) -o $(call FixPath,$(BUILD)/$(PROJECT_NAME).$(EXEC))
 
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
+run: all
+	$(call FixPath,$(BUILD)/$(PROJECT_NAME).$(EXEC))
 
-# Default target built
-$(PROJECT_NAME):all
+test: $(SRC) $(TEST_SRC)
+	gcc $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
+	$(call FixPath,$(BUILD)/$(TEST_PROJECT_NAME).$(EXEC))
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
-
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT)
-
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT)
-
-# Document the code using Doxygen
 doc:
-	make -C ./documentation
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
-clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
-
-# Create new build folder if not present
+	make -C doc
 $(BUILD):
-	mkdir build
+	mkdir $(BUILD)
+
+clean:
+	$(RM) $(call FixPath,$(BUILD)/*)
+	make clean -C doc
+	rmdir $(BUILD) doc/html
